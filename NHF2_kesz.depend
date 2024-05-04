@@ -79,3 +79,83 @@
 	"szemely.h"
 	"memtrace.h"
 
+1714840464 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
+	<iostream>
+	"gtest_lite.h"
+	"szemely.h"
+	"telefonkonyv.h"
+	"oktato.h"
+	"diak.h"
+	"memtrace.h"
+
+1714836398 c:\users\marci\desktop\programok\telefonkonyv-cpp\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<cstdlib>
+	<string>
+	<fstream>
+	<iterator>
+	<regex>
+	"memtrace.h"
+
+1714836398 c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+	<memory>
+	<iomanip>
+	<locale>
+	<typeinfo>
+	<ostream>
+	<stdexcept>
+	<ctime>
+	<iterator>
+	<regex>
+
+1714839686 c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.h
+	<string>
+	"memtrace.h"
+
+1714839385 c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.h
+	"szemely.h"
+	"memtrace.h"
+
+1714839695 c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.h
+	"szemely.h"
+	"memtrace.h"
+
+1714839704 c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.h
+	"szemely.h"
+	"memtrace.h"
+
+1714836398 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1714839105 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.cpp
+	"szemely.h"
+
+1714840361 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.cpp
+	"telefonkonyv.h"
+
+1714838511 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.cpp
+	"oktato.h"
+
+1714838544 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.cpp
+	"diak.h"
+

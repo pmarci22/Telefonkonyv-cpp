@@ -8,6 +8,8 @@
 class Oktato: public Szemely {
     std::string munkahelyiszam;
 public:
+    Oktato(std::string n, std::string b, std::string c, std::string p, std::string msz): Szemely(n,b,c,p), munkahelyiszam(msz) {}
+    ~Oktato() {}
     void show();
 };
 

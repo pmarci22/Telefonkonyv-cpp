@@ -11,13 +11,16 @@ class Telefonkonyv{
     size_t db;
 
 public:
-    Telefonkonyv(size_t m);
+    Telefonkonyv(size_t m=5);
+    Telefonkonyv(const Telefonkonyv& masik);
+    ~Telefonkonyv();
     void add(Szemely* sz);
     void deleteco();
     void list();
     void fwrite(std::string filename);
     void fread(std::string filename);
     void expand(Szemely* sz);
+    Telefonkonyv& operator=(const Telefonkonyv& masik);
 };
 
 #endif // TELEFONKONYV_H_INCLUDED

@@ -7,7 +7,8 @@
 class Diak: public Szemely{
     std::string iskolanev;
 public:
-
+    Diak(std::string n, std::string b, std::string c, std::string p, std::string in): Szemely(n,b,c,p), iskolanev(in) {}
+    ~Diak() {}
     void show();
 };
 

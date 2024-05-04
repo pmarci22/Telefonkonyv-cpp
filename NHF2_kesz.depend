@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1714816798 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1714816803 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+	<memory>
+	<iomanip>
+	<locale>
+	<typeinfo>
+	<ostream>
+	<stdexcept>
+	<ctime>
+	<iterator>
+	<regex>
+
+1714815941 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\szemely.cpp
+	"szemely.h"
+
+1714814661 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\szemely.h
+	<string>
+	"memtrace.h"
+
+1714818768 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\main.cpp
+	<iostream>
+	"gtest_lite.h"
+	"szemely.h"
+	"telefonkonyv.h"
+	"oktato.h"
+	"diak.h"
+	"memtrace.h"
+
+1713276871 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<cstdlib>
+	<string>
+	<fstream>
+	<iterator>
+	<regex>
+	"memtrace.h"
+
+1714816626 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\telefonkonyv.cpp
+	"telefonkonyv.h"
+
+1714815356 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\telefonkonyv.h
+	"szemely.h"
+	"memtrace.h"
+
+1714818574 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\oktato.h
+	"szemely.h"
+	"memtrace.h"
+
+1714818652 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\oktato.cpp
+	"oktato.h"
+
+1714818755 source:c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\diak.cpp
+	"diak.h"
+
+1714818724 c:\users\marci\desktop\programok\nhf2_kesz\nhf2_kesz\diak.h
+	"szemely.h"
+	"memtrace.h"
+

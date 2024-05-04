@@ -5,6 +5,7 @@
 #include "memtrace.h"
 
 class Diak: public Szemely{
+    std::string iskolanev;
 public:
 
     void show();

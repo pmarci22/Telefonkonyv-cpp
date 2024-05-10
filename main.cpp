@@ -13,11 +13,6 @@ int main()
     Telefonkonyv telk;
     telk.add(new Diak("asd","asd","asd","asd","asd"));
     telk.add(new Oktato("asd2","asd2","asd2","asd2","asd2"));
-    telk.add(new Oktato("asd3","asd3","asd3","asd3","asd3"));
-    telk.add(new Oktato("asd3","asd3","asd3","asd3","asd3"));
-    telk.add(new Oktato("asd3","asd3","asd3","asd3","asd3"));
-    telk.add(new Diak("asd3","asd3","asd3","asd3","asd3"));
-
-    telk.list();
+    telk.fwrite("adatbazis.txt");
     return 0;
 }

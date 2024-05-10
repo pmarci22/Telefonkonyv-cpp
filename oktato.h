@@ -11,6 +11,7 @@ public:
     Oktato(std::string n, std::string b, std::string c, std::string p, std::string msz): Szemely(n,b,c,p), munkahelyiszam(msz) {}
     ~Oktato() {}
     void show();
+    void write(std::ofstream& of);
 };
 
 #endif // OKTATO_H_INCLUDED

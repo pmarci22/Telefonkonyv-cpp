@@ -1,6 +1,7 @@
 #include "telefonkonyv.h"
 
-Telefonkonyv::Telefonkonyv(size_t m){
+Telefonkonyv::Telefonkonyv(size_t m)
+{
 
     db=0;
     meret=m;
@@ -8,30 +9,36 @@ Telefonkonyv::Telefonkonyv(size_t m){
 
 }
 
-Telefonkonyv::Telefonkonyv(const Telefonkonyv& masik){
+Telefonkonyv::Telefonkonyv(const Telefonkonyv& masik)
+{
     meret=masik.meret;
     db=masik.db;
     data=new Szemely*[meret];
-    for(size_t i=0; i<db; db++){
+    for(size_t i=0; i<db; db++)
+    {
         data[i]=masik.data[i];
     }
 
 }
 
-Telefonkonyv::~Telefonkonyv(){
+Telefonkonyv::~Telefonkonyv()
+{
     this->deleteco();
     delete[] data;
 }
 
-Telefonkonyv& Telefonkonyv::operator=(const Telefonkonyv& masik){
+Telefonkonyv& Telefonkonyv::operator=(const Telefonkonyv& masik)
+{
 
-    if(this!=&masik){
+    if(this!=&masik)
+    {
         delete[] data;
         meret=masik.meret;
         db=masik.db;
         data=new Szemely*[meret];
 
-        for(size_t i=0; i<db; db++){
+        for(size_t i=0; i<db; db++)
+        {
             data[i]=masik.data[i];
         }
 
@@ -39,42 +46,65 @@ Telefonkonyv& Telefonkonyv::operator=(const Telefonkonyv& masik){
     return *this;
 }
 
-void Telefonkonyv::add(Szemely* sz){
-    if(db<meret){
+void Telefonkonyv::add(Szemely* sz)
+{
+    if(db<meret)
+    {
         data[db]=sz;
         db++;
     }
-    else{
+    else
+    {
         expand(sz);
     }
 }
 
-void Telefonkonyv::deleteco(){
-    for(size_t i=0;i<db;i++){
+void Telefonkonyv::deleteco()
+{
+    for(size_t i=0; i<db; i++)
+    {
         delete data[i];
+    }
+    db=0;
+}
+
+void Telefonkonyv::list()
+{
+    for(size_t i=0; i<db; i++)
+    {
+        data[i]->show();
     }
 }
 
-void Telefonkonyv::list(){
-for(size_t i=0;i<db;i++){
-    data[i]->show();
+void Telefonkonyv::fwrite(std::string filename)
+{
+    std::ofstream fajl(filename);
+    if (fajl.is_open())
+    {
+        for (size_t i = 0; i < db; i++)
+        {
+            data[i]->write(fajl);
+        }
+    }
+    else
+    {
+        std::cout<<"Nem sikerult megnyitni a filet!";
+    }
+
 }
-}
 
-void Telefonkonyv::fwrite(std::string filename){
-
-}
-
-void Telefonkonyv::fread(std::string filename){
+void Telefonkonyv::fread(std::string filename)
+{
 
 }
 
-void Telefonkonyv::expand(Szemely* sz){
-
+void Telefonkonyv::expand(Szemely* sz)
+{
     size_t ujmeret=meret+5;
     Szemely** ujdata=new Szemely*[ujmeret];
 
-    for(size_t i=0; i<db; i++){
+    for(size_t i=0; i<db; i++)
+    {
         ujdata[i]=data[i];
     }
     delete[] data;

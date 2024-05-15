@@ -1,4 +1,6 @@
 #include "telefonkonyv.h"
+#include "oktato.h"
+#include "diak.h"
 
 Telefonkonyv::Telefonkonyv(size_t m)
 {
@@ -85,6 +87,7 @@ void Telefonkonyv::fwrite(std::string filename)
         {
             data[i]->write(fajl);
         }
+        fajl.close();
     }
     else
     {
@@ -95,7 +98,41 @@ void Telefonkonyv::fwrite(std::string filename)
 
 void Telefonkonyv::fread(std::string filename)
 {
+    std::ifstream fajl(filename);
+    if (fajl.is_open())
+    {
+        std::string jelzobit;
+        std::string n, b, c, p, m, i;
+        std::string sor;
+        while (getline(fajl, sor))
+        {
+            std::stringstream ss(sor);
+            std::getline(ss, jelzobit, ',');
 
+            if(jelzobit=="0"){
+                std::getline(ss, n, ',');
+                std::getline(ss, b, ',');
+                std::getline(ss, c, ',');
+                std::getline(ss, p, ',');
+                std::getline(ss, m, ',');
+                Szemely* okt=new Oktato(n,b,c,p,m);
+                add(okt);
+            }else if(jelzobit=="1"){
+                std::getline(ss, n, ',');
+                std::getline(ss, b, ',');
+                std::getline(ss, c, ',');
+                std::getline(ss, p, ',');
+                std::getline(ss, i, ',');
+                Szemely* dik=new Diak(n,b,c,p,i);
+                add(dik);
+            }
+        }
+        fajl.close();
+    }
+    else
+    {
+        std::cout<<"Nem sikerult megnyitni a filet!";
+    }
 }
 
 void Telefonkonyv::expand(Szemely* sz)

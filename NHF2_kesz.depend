@@ -79,8 +79,10 @@
 	"szemely.h"
 	"memtrace.h"
 
-1715369412 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
+1715784046 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
 	<iostream>
+	<locale>
+	<windows.h>
 	"gtest_lite.h"
 	"szemely.h"
 	"telefonkonyv.h"
@@ -88,7 +90,7 @@
 	"diak.h"
 	"memtrace.h"
 
-1715366925 c:\users\marci\desktop\programok\telefonkonyv-cpp\gtest_lite.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\gtest_lite.h
 	<iostream>
 	<cassert>
 	<cmath>
@@ -101,7 +103,7 @@
 	<regex>
 	"memtrace.h"
 
-1715366925 c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.h
 	<new>
 	<cstdio>
 	<stdlib.h>
@@ -123,23 +125,23 @@
 	<iterator>
 	<regex>
 
-1715368280 c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.h
 	<string>
 	"memtrace.h"
 
-1715366925 c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.h
 	"szemely.h"
 	"memtrace.h"
 
-1715368236 c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.h
 	"szemely.h"
 	"memtrace.h"
 
-1715368248 c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.h
+1715780727 c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.h
 	"szemely.h"
 	"memtrace.h"
 
-1715366925 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.cpp
+1715780727 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -147,15 +149,17 @@
 	<ctype.h>
 	"memtrace.h"
 
-1715366925 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.cpp
+1715780727 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.cpp
 	"szemely.h"
 
-1715368292 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.cpp
+1715783592 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.cpp
 	"telefonkonyv.h"
+	"oktato.h"
+	"diak.h"
 
-1715368240 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.cpp
+1715780727 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.cpp
 	"oktato.h"
 
-1715369516 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.cpp
+1715780727 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.cpp
 	"diak.h"
 

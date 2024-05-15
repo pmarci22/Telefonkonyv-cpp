@@ -1,2 +1,2 @@
-1,asd,asd,asd,asd,asd
-0,asd2,asd2,asd2,asd2,asd2
+1,Gábor László,Gabi,1117 Budapest Gárdonyi tér 3.,+36 20 123 4567,Xántus János Gimnázium
+0,Szabó Dániel,Dani,7624 Pécs Zsolnay Vilmos utca 16.,+36 70 345 6789,+36 60 600 8000

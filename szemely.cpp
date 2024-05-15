@@ -1,4 +1,6 @@
 #include "szemely.h"
+#include "oktato.h"
+#include "diak.h"
 
 std::string Szemely::getNev()const {return nev;}
 

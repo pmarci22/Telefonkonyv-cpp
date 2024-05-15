@@ -21,6 +21,9 @@ public:
     void fread(std::string filename);
     void expand(Szemely* sz);
     Telefonkonyv& operator=(const Telefonkonyv& masik);
+    size_t size()const;
+    size_t capacity()const;
+    Szemely* operator[](size_t idx);
 };
 
 #endif // TELEFONKONYV_H_INCLUDED

@@ -21,15 +21,50 @@ int main()
         setlocale(LC_ALL, "");
     #endif
 
-    Telefonkonyv telk;
-    telk.add(new Diak("G·bor L·szlÛ","Gabi","1117 Budapest G·rdonyi tÈr 3.","+36 20 123 4567","X·ntus J·nos Gimn·zium"));
+    TEST(telefonkonyv, konstruktor) {
 
-    telk.add(new Oktato("SzabÛ D·niel","Dani","7624 PÈcs Zsolnay Vilmos utca 16.","+36 70 345 6789","+36 60 600 8000"));
+        Telefonkonyv telk1;
+        size_t s=5;
+        EXPECT_EQ(s, telk1.capacity());
+        size_t d=0;
+        EXPECT_EQ(d, telk1.size());
 
-    telk.fwrite("adatbazis.txt");
-    telk.deleteco();
+    } END
 
-    telk.fread("adatbazis.txt");
-    telk.list();
+        TEST(telefonkonyv, add) {
+
+        Telefonkonyv telk2;
+        size_t s=5;
+        EXPECT_EQ(s, telk2.capacity());
+        telk2.add(new Oktato("Szab√≥ D√°niel","Dani","7624 P√©cs Zsolnay Vilmos utca 16.","+36 70 345 6789","+36 60 600 8000"));
+        size_t d=1;
+        EXPECT_EQ(d, telk2.size());
+
+    } END
+
+        TEST(telefonkonyv, data) {
+
+        Telefonkonyv telk3;
+        telk3.add(new Diak("Kov√°cs Nikolett","Niki","6722 Szeged Pet≈ëfi S√°ndor sug√°r√∫t 12.","+36 30 234 5678","X√°ntus J√°nos Gimn√°zium"));
+        std::string nev=telk3[0]->getNev();
+        EXPECT_EQ("Kov√°cs Nikolett", nev);
+        std::string bn=telk3[0]->getBecenev();
+        EXPECT_EQ("Niki", bn);
+        std::string cim=telk3[0]->getCim();
+        EXPECT_EQ("6722 Szeged Pet≈ëfi S√°ndor sug√°r√∫t 12.", cim);
+        std::string pszam=telk3[0]->getPrivatszam();
+        EXPECT_EQ("+36 30 234 5678", pszam);
+
+    } END
+
+        TEST(telefonkonyv, indexop) {
+
+        Telefonkonyv telk4;
+        telk4.add(new Oktato("Kov√°cs Nikolett","Niki","6722 Szeged Pet≈ëfi S√°ndor sug√°r√∫t 12.","+36 30 234 5678","+36 30 547 5896"));
+        size_t si=1;
+        EXPECT_EQ(si, telk4.size());
+        EXPECT_THROW(telk4[1], const char *);
+
+    } END
     return 0;
 }

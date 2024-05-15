@@ -152,3 +152,12 @@ void Telefonkonyv::expand(Szemely* sz)
     db++;
 
 }
+
+size_t Telefonkonyv::size()const{return db;}
+
+size_t Telefonkonyv::capacity()const{return meret;}
+
+Szemely* Telefonkonyv::operator[](size_t idx){
+    if(idx>=db) throw "EVZ1MK";
+    return data[idx];
+}

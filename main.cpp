@@ -1,3 +1,7 @@
+/**
+ * @file main.cpp
+ * @brief Tesztprogram a Telefonkonyv osztályhoz.
+ */
 #include <iostream>
 #include <locale>
 #if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
@@ -11,7 +15,11 @@
 #include "memtrace.h"
 
 
-
+/**
+ * @brief A program belépési pontja.
+ *
+ * @return int A program visszatérési értéke.
+ */
 int main()
 {
 
@@ -21,6 +29,9 @@ int main()
         setlocale(LC_ALL, "");
     #endif
 
+        /**
+     * @test Telefonkonyv konstruktor tesztelése.
+     */
     TEST(telefonkonyv1, konstruktor) {
 
         Telefonkonyv telk1;
@@ -31,6 +42,9 @@ int main()
 
     } END
 
+         /**
+     * @test Személy hozzáadása a Telefonkonyv-hez.
+     */
         TEST(telefonkonyv2, add) {
 
         Telefonkonyv telk2;
@@ -41,22 +55,27 @@ int main()
         EXPECT_EQ(d, telk2.size());
 
     } END
-
+        /**
+     * @test Telefonkonyv adatok ellenőrzése.
+     */
         TEST(telefonkonyv3, data) {
 
         Telefonkonyv telk3;
         telk3.add(new Diak("Kovács Nikolett","Niki","6722 Szeged Petőfi Sándor sugárút 12.","+36 30 234 5678","Xántus János Gimnázium"));
-        std::string nev=telk3[0]->getNev();
-        EXPECT_EQ("Kovács Nikolett", nev);
-        std::string bn=telk3[0]->getBecenev();
-        EXPECT_EQ("Niki", bn);
-        std::string cim=telk3[0]->getCim();
-        EXPECT_EQ("6722 Szeged Petőfi Sándor sugárút 12.", cim);
-        std::string pszam=telk3[0]->getPrivatszam();
-        EXPECT_EQ("+36 30 234 5678", pszam);
+        std::string nev="Kovács Nikolett";
+        EXPECT_EQ(telk3[0]->getNev(), nev);
+        std::string bn="Niki";
+        EXPECT_EQ(bn, telk3[0]->getBecenev());
+        std::string cim="6722 Szeged Petőfi Sándor sugárút 12.";
+        EXPECT_EQ(telk3[0]->getCim(), cim);
+        std::string pszam="+36 30 234 5678";
+        EXPECT_EQ(telk3[0]->getPrivatszam(), pszam);
 
     } END
 
+        /**
+     * @test Telefonkonyv index operátor tesztelése.
+     */
         TEST(telefonkonyv4, indexop) {
 
         Telefonkonyv telk4;
@@ -67,6 +86,9 @@ int main()
 
     } END
 
+        /**
+     * @test Telefonkonyv deleteco tesztelése.
+     */
         TEST(telefonkonyv5, deleteco) {
 
         Telefonkonyv telk4;
@@ -79,6 +101,9 @@ int main()
 
     } END
 
+        /**
+     * @test Telefonkonyv expand tesztelése.
+     */
         TEST(telefonkonyv6, expand) {
 
         Telefonkonyv telk5;
@@ -95,6 +120,9 @@ int main()
 
     } END
 
+         /**
+     * @test Telefonkonyv fájlba írás és olvasás tesztelése.
+     */
         TEST(telefonkonyv7, file) {
 
         Telefonkonyv telk6;
@@ -104,8 +132,8 @@ int main()
         telk6.deleteco();
         telk6.fread("adatbazis.txt");
         telk6.list();
-        std::string s=telk6[0]->getNev();
-        EXPECT_EQ("Kovács Nikolett", s);
+        std::string s="Kovács Nikolett";
+        EXPECT_EQ(telk6[0]->getNev(), s);
         size_t si=2;
         EXPECT_EQ(si, telk6.size());
 

@@ -79,7 +79,7 @@
 	"szemely.h"
 	"memtrace.h"
 
-1715865338 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
+1715867039 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
 	<iostream>
 	<locale>
 	<windows.h>
@@ -125,11 +125,11 @@
 	<iterator>
 	<regex>
 
-1715866036 c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.h
+1715870924 c:\users\marci\desktop\programok\telefonkonyv-cpp\szemely.h
 	<string>
 	"memtrace.h"
 
-1715866306 c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.h
+1715870939 c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.h
 	"szemely.h"
 	"memtrace.h"
 
@@ -137,11 +137,11 @@
 	"szemely.h"
 	"memtrace.h"
 
-1715865679 c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.h
+1715870866 c:\users\marci\desktop\programok\telefonkonyv-cpp\diak.h
 	"szemely.h"
 	"memtrace.h"
 
-1715863968 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.cpp
+1715870890 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\memtrace.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

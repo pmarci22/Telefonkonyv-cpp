@@ -6,7 +6,7 @@
 
 /**
  * @class Diak
- * @brief Diák osztály, amely a Szemely osztályból öröklõdik.
+ * @brief DiÃ¡k osztÃ¡ly, amely a Szemely osztÃ¡lybÃ³l Ã¶rÃ¶klÅ‘dik.
  */
 class Diak: public Szemely{
     std::string iskolanev;
@@ -14,28 +14,28 @@ public:
     /**
      * @brief Diak konstruktor.
      *
-     * @param n A diák neve
-     * @param b A diák beceneve
-     * @param c A diák címe
-     * @param p A diák privát telefonszáma
+     * @param n A diÃ¡k neve
+     * @param b A diÃ¡k beceneve
+     * @param c A diÃ¡k cÃ­me
+     * @param p A diÃ¡k privÃ¡t telefonszÃ¡ma
      * @param in Az iskola neve
      */
     Diak(std::string n, std::string b, std::string c, std::string p, std::string in): Szemely(n,b,c,p), iskolanev(in) {}
 
     /**
-     * @brief Diak osztály destruktora.
+     * @brief Diak osztÃ¡ly destruktora.
      */
     ~Diak() {}
 
     /**
-     * @brief Megjeleníti a diák adatait a standard kimeneten.
+     * @brief MegjelenÃ­ti a diÃ¡k adatait a standard kimeneten.
      */
     void show();
 
     /**
-     * @brief A diák adatait fájlba írja.
+     * @brief A diÃ¡k adatait fÃ¡jlba Ã­rja.
      *
-     * @param of A fájl kimeneti adatfolyama, amelybe írni kell.
+     * @param of A fÃ¡jl kimeneti adatfolyama, amelybe Ã­rni kell.
      */
     void write(std::ofstream& of);
 };

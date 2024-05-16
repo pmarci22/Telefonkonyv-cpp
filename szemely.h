@@ -7,7 +7,7 @@
 
 /**
  * @class Szemely
- * @brief Absztrakt Személy osztály.
+ * @brief Absztrakt SzemÃ©ly osztÃ¡ly.
  */
 class Szemely{
 
@@ -18,57 +18,57 @@ class Szemely{
 
 public:
      /**
-     * @brief Új Szemely objektum létrehozása.
+     * @brief Ãšj Szemely objektum lÃ©trehozÃ¡sa.
      *
-     * @param n A személy neve
-     * @param b A személy beceneve
-     * @param c A személy címe
-     * @param p A személy privát telefonszáma
+     * @param n A szemÃ©ly neve
+     * @param b A szemÃ©ly beceneve
+     * @param c A szemÃ©ly cÃ­me
+     * @param p A szemÃ©ly privÃ¡t telefonszÃ¡ma
      */
     Szemely(std::string n, std::string b, std::string c, std::string p) : nev(n), becenev(b), cim(c), privatszam(p) {}
 
     /**
-     * @brief Virtuális destruktor a Szemely osztályhoz.
+     * @brief VirtuÃ¡lis destruktor a Szemely osztÃ¡lyhoz.
      */
     virtual ~Szemely() {}
 
      /**
-     * @brief Absztrakt metódus a személy adatainak megjelenítésére.
+     * @brief Absztrakt metÃ³dus a szemÃ©ly adatainak megjelenÃ­tÃ©sÃ©re.
      */
     virtual void show()=0;
 
     /**
-     * @brief Absztrakt metódus a személy adatainak fájlba írására.
+     * @brief Absztrakt metÃ³dus a szemÃ©ly adatainak fÃ¡jlba Ã­rÃ¡sÃ¡ra.
      *
-     * @param of A fájl kimeneti adatfolyama, amelybe írni kell
+     * @param of A fÃ¡jl kimeneti adatfolyama, amelybe Ã­rni kell
      */
     virtual void write(std::ofstream& of)=0;
 
      /**
-     * @brief Visszaadja a személy nevét.
+     * @brief Visszaadja a szemÃ©ly nevÃ©t.
      *
-     * @return A személy neve
+     * @return A szemÃ©ly neve
      */
     std::string getNev()const;
 
     /**
-     * @brief Visszaadja a személy becenevét.
+     * @brief Visszaadja a szemÃ©ly becenevÃ©t.
      *
-     * @return A személy beceneve
+     * @return A szemÃ©ly beceneve
      */
     std::string getBecenev()const;
 
     /**
-     * @brief Visszaadja a személy címét.
+     * @brief Visszaadja a szemÃ©ly cÃ­mÃ©t.
      *
-     * @return A személy címe
+     * @return A szemÃ©ly cÃ­me
      */
     std::string getCim()const;
 
     /**
-     * @brief Visszaadja a személy privát telefonszámát.
+     * @brief Visszaadja a szemÃ©ly privÃ¡t telefonszÃ¡mÃ¡t.
      *
-     * @return A személy privát telefonszáma
+     * @return A szemÃ©ly privÃ¡t telefonszÃ¡ma
      */
     std::string getPrivatszam()const;
 };

@@ -6,7 +6,7 @@
 
 /**
  * @class Telefonkonyv
- * @brief Telefonkönyv osztály, amely Személy objektumokat tárol.
+ * @brief TelefonkÃ¶nyv osztÃ¡ly, amely SzemÃ©ly objektumokat tÃ¡rol.
  */
 class Telefonkonyv{
 
@@ -16,89 +16,89 @@ class Telefonkonyv{
 
 public:
      /**
-     * @brief Telefonkonyv osztály konstruktora.
+     * @brief Telefonkonyv osztÃ¡ly konstruktora.
      *
-     * @param m A telefonkönyv kezdõ mérete (alapértelmezett: 5)
+     * @param m A telefonkÃ¶nyv kezdÅ‘ mÃ©rete (alapÃ©rtelmezett: 5)
      */
     Telefonkonyv(size_t m=5);
 
     /**
-     * @brief Telefonkonyv osztály másoló konstruktora.
+     * @brief Telefonkonyv osztÃ¡ly mÃ¡solÃ³ konstruktora.
      *
-     * @param masik A másik Telefonkonyv objektum, amelybõl másolunk
+     * @param masik A mÃ¡sik Telefonkonyv objektum, amelybÅ‘l mÃ¡solunk
      */
     Telefonkonyv(const Telefonkonyv& masik);
 
     /**
-     * @brief Telefonkonyv osztály destruktora.
+     * @brief Telefonkonyv osztÃ¡ly destruktora.
      */
     ~Telefonkonyv();
 
     /**
-     * @brief Új Személy objektum hozzáadása a telefonkönyvhöz.
+     * @brief Ãšj SzemÃ©ly objektum hozzÃ¡adÃ¡sa a telefonkÃ¶nyvhÃ¶z.
      *
-     * @param sz A hozzáadandó Személy objektum
+     * @param sz A hozzÃ¡adandÃ³ SzemÃ©ly objektum
      */
     void add(Szemely* sz);
 
     /**
-     * @brief Telefonkonyv kiürítése és az összes Személy objektum törlése.
+     * @brief Telefonkonyv kiÃ¼rÃ­tÃ©se Ã©s az Ã¶sszes SzemÃ©ly objektum tÃ¶rlÃ©se.
      */
     void deleteco();
 
     /**
-     * @brief A telefonkönyv tartalmának kilistázása a standard kimenetre.
+     * @brief A telefonkÃ¶nyv tartalmÃ¡nak kilistÃ¡zÃ¡sa a standard kimenetre.
      */
     void list();
 
     /**
-     * @brief A telefonkönyv adatainak fájlba írása.
+     * @brief A telefonkÃ¶nyv adatainak fÃ¡jlba Ã­rÃ¡sa.
      *
-     * @param filename A fájl neve, ahová írni kell
+     * @param filename A fÃ¡jl neve, ahovÃ¡ Ã­rni kell
      */
     void fwrite(std::string filename);
 
     /**
-     * @brief A telefonkönyv adatainak beolvasása fájlból.
+     * @brief A telefonkÃ¶nyv adatainak beolvasÃ¡sa fÃ¡jlbÃ³l.
      *
-     * @param filename A fájl neve, ahonnan olvasni kell
+     * @param filename A fÃ¡jl neve, ahonnan olvasni kell
      */
     void fread(std::string filename);
 
     /**
-     * @brief A telefonkönyv kapacitásának bõvítése.
+     * @brief A telefonkÃ¶nyv kapacitÃ¡sÃ¡nak bÅ‘vÃ­tÃ©se.
      *
-     * @param sz Az új Személy objektum, amely miatt bõvítünk
+     * @param sz Az Ãºj SzemÃ©ly objektum, amely miatt bÅ‘vÃ­tÃ¼nk
      */
     void expand(Szemely* sz);
 
     /**
-     * @brief Telefonkonyv osztály egyenlõség operátora.
+     * @brief Telefonkonyv osztÃ¡ly egyenlÅ‘sÃ©g operÃ¡tora.
      *
-     * @param masik A másik Telefonkonyv objektum, amelybõl hozzárendelünk
-     * @return A hozzárendelt Telefonkonyv objektum
+     * @param masik A mÃ¡sik Telefonkonyv objektum, amelybÅ‘l hozzÃ¡rendelÃ¼nk
+     * @return A hozzÃ¡rendelt Telefonkonyv objektum
      */
     Telefonkonyv& operator=(const Telefonkonyv& masik);
 
      /**
-     * @brief Visszaadja a telefonkönyvben tárolt Személy objektumok számát.
+     * @brief Visszaadja a telefonkÃ¶nyvben tÃ¡rolt SzemÃ©ly objektumok szÃ¡mÃ¡t.
      *
-     * @return A tárolt Személy objektumok száma
+     * @return A tÃ¡rolt SzemÃ©ly objektumok szÃ¡ma
      */
     size_t size()const;
 
      /**
-     * @brief Visszaadja a telefonkönyv kapacitását.
+     * @brief Visszaadja a telefonkÃ¶nyv kapacitÃ¡sÃ¡t.
      *
-     * @return A telefonkönyv kapacitása
+     * @return A telefonkÃ¶nyv kapacitÃ¡sa
      */
     size_t capacity()const;
 
     /**
-     * @brief Visszaad egy Személy objektumot az adott indexen.
+     * @brief Visszaad egy SzemÃ©ly objektumot az adott indexen.
      *
-     * @param idx Az index, amelyen a Személy objektum található
-     * @return A Személy objektum az adott indexen (Hibás index esetén kivételt dob!)
+     * @param idx Az index, amelyen a SzemÃ©ly objektum talÃ¡lhatÃ³
+     * @return A SzemÃ©ly objektum az adott indexen (HibÃ¡s index esetÃ©n kivÃ©telt dob!)
      */
     Szemely* operator[](size_t idx);
 };

@@ -1,4 +1,6 @@
 #include "telefonkonyv.h"
+#include "diak.h"
+#include "oktato.h"
 
 Telefonkonyv::Telefonkonyv(size_t m)
 {

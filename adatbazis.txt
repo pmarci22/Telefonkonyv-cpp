@@ -1,2 +1,2 @@
-1,G·bor L·szlÛ,Gabi,1117 Budapest G·rdonyi tÈr 3.,+36 20 123 4567,X·ntus J·nos Gimn·zium
-0,SzabÛ D·niel,Dani,7624 PÈcs Zsolnay Vilmos utca 16.,+36 70 345 6789,+36 60 600 8000
+0,Kov√°cs Nikolett,Niki,6722 Szeged Pet≈ëfi S√°ndor sug√°r√∫t 12.,+36 30 234 5678,+36 30 547 5896
+1,Horv√°th Emese,Emi,1037 Budapest Montevideo utca 2.,+36 30 234 5678,√ìbudai Gimn√°zium

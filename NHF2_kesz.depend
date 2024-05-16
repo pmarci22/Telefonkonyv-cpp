@@ -79,7 +79,7 @@
 	"szemely.h"
 	"memtrace.h"
 
-1715798092 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
+1715863509 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\main.cpp
 	<iostream>
 	<locale>
 	<windows.h>
@@ -154,10 +154,10 @@
 	"oktato.h"
 	"diak.h"
 
-1715794737 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.cpp
+1715861914 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\telefonkonyv.cpp
 	"telefonkonyv.h"
-	"oktato.h"
 	"diak.h"
+	"oktato.h"
 
 1715797789 source:c:\users\marci\desktop\programok\telefonkonyv-cpp\oktato.cpp
 	"oktato.h"

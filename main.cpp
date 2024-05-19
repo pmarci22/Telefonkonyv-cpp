@@ -20,15 +20,10 @@
  *
  * @return int A program visszatérési értéke.
  */
+
+ #ifdef CPORTA
 int main()
 {
-
-    #if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
-        SetConsoleCP(1250);
-        SetConsoleOutputCP(1250);
-        setlocale(LC_ALL, "");
-    #endif
-
         /**
      * @test Telefonkonyv konstruktor tesztelése.
      */
@@ -140,3 +135,83 @@ int main()
     } END
     return 0;
 }
+
+#else
+int main(){
+    #if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
+        setlocale(LC_ALL, "");
+        SetConsoleCP(1250);
+        SetConsoleOutputCP(1250);
+    #endif
+    Telefonkonyv menustelk;
+    menustelk.fread("adatbazis.txt");
+    int valasztas;
+    do {
+        std::cout << "1. Uj kontakt hozzaadasa\n";
+        std::cout << "2. Kontaktok listazasa\n";
+        std::cout << "3. Osszes torlese\n";
+        std::cout << "4. Kilepes\n";
+        std::cout << "Valasszon egy opciot: ";
+        std::cin >> valasztas;
+
+        switch (valasztas) {
+            case 1: {
+                std::string nev, becenev, cim, privatszam, munkahelyi, iskola;
+                int valasztas2;
+                std::cout << "Diakot(1) vagy Oktatot(2) kivan hozzaadni?";
+                std::cin >> valasztas2;
+                if(valasztas2==1){
+                std::cin.ignore(1);
+                std::cout << "Adja meg a nevet: ";
+                std::getline(std::cin, nev);
+                std::cout << "Adja meg a becenevet: ";
+                std::getline(std::cin, becenev);
+                std::cout << "Adja meg a cimet: ";
+                std::getline(std::cin, cim);
+                std::cout << "Adja meg a privat szamot: ";
+                std::getline(std::cin, privatszam);
+                std::cout << "Adja meg az iskolanevet: ";
+                std::getline(std::cin, iskola);
+
+                menustelk.add(new Diak(nev,becenev,cim,privatszam,iskola));
+                }else{
+                std::cin.ignore(1);
+                std::cout << "Adja meg a nevet: ";
+                std::getline(std::cin, nev);
+                std::cout << "Adja meg a becenevet: ";
+                std::getline(std::cin, becenev);
+                std::cout << "Adja meg a cimet: ";
+                std::getline(std::cin, cim);
+                std::cout << "Adja meg a privat szamot: ";
+                std::getline(std::cin, privatszam);
+                std::cout << "Adja meg az munkahelyi szamot: ";
+                std::getline(std::cin, munkahelyi);
+
+                menustelk.add(new Oktato(nev,becenev,cim,privatszam,munkahelyi));
+                }
+                break;
+            }
+            case 2: {
+                menustelk.list();
+                break;
+            }
+            case 3: {
+                menustelk.deleteco();
+                break;
+            }
+            case 4: {
+                menustelk.fwrite("adatbazis.txt");
+                std::cout << "Kilepes...\n";
+                break;
+            }
+            default: {
+                std::cout << "Ervenytelen valasztas. Kerjuk, probalja ujra.\n";
+                break;
+            }
+        }
+    } while (valasztas != 4);
+    return 0;
+}
+
+
+#endif

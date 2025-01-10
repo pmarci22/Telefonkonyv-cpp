@@ -42,11 +42,6 @@ A projekt futtatásához a következő szoftverekre van szükség:
 - C++ compiler / C++ fordító: A project forráskódjának fordításához.
 - make: Az építési folyamat automatizálásához.
 
-Linuxon (on linux):
-```bash
-sudo apt-get install g++ make
-```
-
 Kövesd a következő lépéseket: / To build the project, follow these steps:
 
 1. Klónozd a repositoryt / Clone the repository.
@@ -56,8 +51,14 @@ Kövesd a következő lépéseket: / To build the project, follow these steps:
 
 ```bash
 git clone github.com/pmarci22/Telefonkonyv-cpp
+```
+```bash
 cd Telefonkonyv-cpp
+```
+```bash
 make
+```
+```bash
 ./telefonkonyv
 ```
 ## License
